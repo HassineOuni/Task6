@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Exercice3</h1>
+
+<script>
+function MoodDetect(liste) {
+    return liste.map(function(utilisateur) {
+        let etat='';
+        if (utilisateur.comment.includes("<3")) {
+            etat = "heureux";
+        } else if (utilisateur.comment.includes(":(")) {
+            etat = "triste";
+        }
+        else {
+            etat = "neutre";
+        }
+        return {name: utilisateur.name, etat: etat};
+  });
+}
+const users = [
+{ name : "sarah" , comment : "j'aime ce poste <3" },
+{ name : "monya" , comment : "le poste est null :( " },
+{ name : "carlos" , comment : "salut l'algérie" }
+]
+resultat = MoodDetect(users);
+console.log(resultat);
+</script>
+    
+</body>
+</html>

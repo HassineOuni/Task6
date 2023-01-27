@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Exercice2</h1>
+
+
+    
+    </style>
+<script>
+function FormatToArray(str1) {
+    return str1.split("-").map(function(chaine) {
+        [nom, prénom] = chaine.split("&");
+        return { 'firstname': nom, 'lastname': prénom };
+    });
+}
+const str1 = 'ahmed&ferah-moez&saadi-fadhel&gadihi';
+resultat = FormatToArray(str1);
+console.log(resultat);
+</script>
+</body>
+</html>

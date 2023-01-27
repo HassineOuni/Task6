@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <h1 style="text-align: center;">Exercice1</h1>
+    <script>
+function MineurMajeur(persons) {
+    return persons.map(function(x) {
+        if (x.age >= 18) {
+            x.status = "majeur";
+        } else {
+            x.status = "mineur";
+        }
+        return x;
+    });
+}
+const persons = [
+{ name : "MONCEF" , age: 13},
+{ name : "BAHIJA" , age: 23},
+{ name : "ALA" , age: 18},
+];
+
+resultat = MineurMajeur(persons);
+console.log(resultat);
+
+
+</script>
+    
+</body>
+</html>
